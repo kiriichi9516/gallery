@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>制作所AI美術館</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/slick-theme.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+<script>
+    
+    $(function() {
+		$('.multiple-item').slick({
+          dots: true,
+		  arrows: true,
+          autoplay: false,
+          infinite: true,
+		  fade: true,
+          speed: 400,
+			autoplaySpeed: 3500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+			initialSlide:1,
+			centerPadding: '0%'
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            var $mainBox = $('.main-box2');
+            if (nextSlide === 0) {
+                $mainBox.css('background-position', '0 center');
+            } else if (nextSlide === 1) {
+                $mainBox.css('background-position', '33% center');
+            } else if (nextSlide === 2) {
+                $mainBox.css('background-position', '66% center');
+            } else if (nextSlide === 3) {
+                $mainBox.css('background-position', '100% center');
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+	$(function() {
+		$('.fancybox').fancybox({
+			// オプションを下記に記載していきます
+			transitionEffect: "slide", //アニメーションをズームインアウトに
+			loop : true, // 複数画像表示時に最初と最後をループさせる
+			infobar : false,
+			autoFocus : false,
+			hash : false,
+			keyboard : false,
+			animationEffect : false,
+			image : {
+				preload : "auto",
+			},
+  
+		});
+	});
+  
+  </script>
+</head>
+
+<body>
+<script type="text/javascript" src="//tm.r-ad.ne.jp/118/ra030472000.js" charset="utf-8"></script>	
+<div class="main-box2 position">
+    <div class="slide-box">
+        <div class="multiple-item">
+			<div class="slide-item">
+				<div class="slide-flex">
+					<div class="slide-left">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku1">
+										<img src="images/fuchi-01.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal1"><img src="images/pic-01.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slide-center">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku2">
+										<img src="images/fuchi-02.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal2"><img src="images/pic-02.jpg" alt=""></a>
+								</div>
+							</li>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku3">
+										<img src="images/fuchi-03.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal3"><img src="images/pic-03.jpg" alt=""></a>
+								</div>
+							</li>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku4">
+										<img src="images/fuchi-04.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal4"><img src="images/pic-04.jpg" alt=""></a>
+								</div>
+							</li>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku6">
+										<img src="images/fuchi-06.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal6"><img src="images/pic-06.jpg" alt=""></a>
+								</div>
+							</li>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku7">
+										<img src="images/fuchi-07.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal7"><img src="images/pic-07.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slide-right">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku5">
+										<img src="images/fuchi-05.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal5"><img src="images/pic-05.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="slide-item">
+				<div class="slide-flex ptn2">
+					<div class="slide-left2">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku8">
+										<img src="images/fuchi-08.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal8"><img src="images/pic-08.jpg" alt=""></a>
+								</div>
+							</li>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku9">
+										<img src="images/fuchi-09.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal9"><img src="images/pic-09.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slide-center2">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku10">
+										<img src="images/fuchi-10.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal10"><img src="images/pic-10.jpg" alt=""></a>
+								</div>
+							</li>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku11">
+										<img src="images/fuchi-11.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal11"><img src="images/pic-11.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slide-right2">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku12">
+										<img src="images/fuchi-12.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal12"><img src="images/pic-12.jpg" alt=""></a>
+								</div>
+							</li>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku13">
+										<img src="images/fuchi-13.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal13"><img src="images/pic-13.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="slide-item">
+				<div class="slide-flex ptn3">
+					<div class="slide-left3-1">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku14">
+										<img src="images/fuchi-14.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal14"><img src="images/pic-14.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slide-left3-2">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku15">
+										<img src="images/fuchi-15.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal15"><img src="images/pic-15.jpg" alt=""></a>
+								</div>
+							</li>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku16">
+										<img src="images/fuchi-16.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal16"><img src="images/pic-16.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slide-center3">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku10">
+										<img src="images/fuchi-17.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal17"><img src="images/pic-17.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slide-right3-1">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku18">
+										<img src="images/fuchi-18.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal18"><img src="images/pic-18.jpg" alt=""></a>
+								</div>
+							</li>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku19">
+										<img src="images/fuchi-19.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal19"><img src="images/pic-19.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slide-right3-2">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku20">
+										<img src="images/fuchi-20.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal20"><img src="images/pic-20.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="slide-item">
+				<div class="slide-flex ptn4">
+					<div class="slide-left4-1">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku21">
+										<img src="images/fuchi-21.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal21"><img src="images/pic-21.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slide-left4-2">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku22">
+										<img src="images/fuchi-22.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal22"><img src="images/pic-22.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slide-center4">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku23">
+										<img src="images/fuchi-23.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal23"><img src="images/pic-23.jpg" alt=""></a>
+								</div>
+							</li>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku24">
+										<img src="images/fuchi-24.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal24"><img src="images/pic-24.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slide-right4-1">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku25">
+										<img src="images/fuchi-25.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal25"><img src="images/pic-25.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="slide-right4-2">
+						<ul>
+							<li>
+								<div class="slide-img">
+									<div class="slide-waku26">
+										<img src="images/fuchi-26.png" alt="">
+									</div>
+									<a class="fancybox" data-type="inline" href="#prizeModal26"><img src="images/pic-26.jpg" alt=""></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="close-btn min">
+		<a href="index.html">
+			出口
+		</a>
+	</div>
+</div>
+<div id="prizeModal5" style="display: none;">
+	<div class="modal-content">
+		<div class="modal-body">
+			<div class="modal-img">
+				<div class="img-waku">
+					<img src="images/modal-fuchi.png" alt="">
+				</div>
+				<img src="images/modalpic-05.jpg" alt="">
+			</div>
+			<div class="modal-text">
+				<img src="images/text-bg.png" alt="">
+				<div class="text-box min">
+				<p class="ttl">世界の子どもたちに笑顔を</p>
+				<p class="name">Takeshi Kato</p>
+				<p class="text">世界には毎日の食事にさえ困っている子どもたちがいますが、食事は生きる上で最も重要です。飢えを恐れずに済むことで、子どもたちは学び、遊び、夢を追いかける力を得られます。私は、世界の子どもたちに笑顔を届ける旅に出ます。</p>
+				</div>
+			</div>
+			<button type="button" class="modalclose-btn rounded-pill" data-fancybox-close><img src="images/batsu.png""></button>
+		</div>
+	</div>
+</div>
+</body>
+</html>
