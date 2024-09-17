@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>部屋の内部</title>
+ <link rel="stylesheet" href="css/style_entrance.css">
+</head>
+
+<body>
+ <div id="letter" class="letterAnim"></div>
+ <div class="letterBg"></div>
+ <div id="room-container"></div>
+ <div class="controls">
+  <button id="leftBtn">左へ</button>
+  <button id="rightBtn">右へ</button>
+ </div>
+
+ <div id="wall-buttons" style="display: none;">
+  <a href="../" id="frontLink" class="wall-link no1_img">
+   <img src="img/no1_img.png" alt="">
+  </a>
+  <a href="#" id="rightLink" class="wall-link comingsoon">
+   <img src="img/comingsoon.png" alt="">
+  </a>
+  <a href="#" id="backLink" class="wall-link comingsoon">
+   <img src="img/comingsoon.png" alt="">
+  </a>
+  <a href="#" id="leftLink" class="wall-link comingsoon">
+   <img src="img/comingsoon.png" alt="">
+  </a>
+ </div>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+ <script type="module" src="js/lottie.js"></script>
+ <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+ <script type="module" src="js/room.js"></script>
+ <script type="module" src="js/style.js"></script>
+</body>
+
+</html>
