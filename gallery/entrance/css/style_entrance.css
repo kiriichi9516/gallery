@@ -19,12 +19,6 @@ img {
   z-index: 100;
   width: 100%;
 }
-@media screen and (max-width: 768px) {
-  #letter {
-    width: 260vw;
-  }
-}
-
 .letterBg {
   position: absolute;
   top: 0;
@@ -59,6 +53,12 @@ img {
   transform: translateX(-50%);
   display: flex;
   gap: 20px;
+}
+@media screen and (max-width: 400px) {
+  .controls {
+    bottom: 32vw;
+    gap: 10vw;
+  }
 }
 
 button {
@@ -110,9 +110,12 @@ button {
 }
 @media screen and (max-width: 400px) {
   .wall-link.no1_img {
-    max-width: none;
-    width: 70%;
+    width: 67%;
+    margin: 0 auto;
   }
+}
+.wall-link.no1_img img {
+  display: block;
 }
 .wall-link.comingsoon {
   padding: 0;
@@ -121,13 +124,19 @@ button {
   padding-top: 120px;
   pointer-events: none !important;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
   .wall-link.comingsoon {
     width: 86%;
-    padding-top: 36vw;
+    padding-top: 140px;
+    margin: 0 auto;
   }
 }
 
 .wall-link:hover {
   opacity: 0.8;
+}
+
+.no-transition * {
+  transition: none !important;
+  animation: none !important;
 }/*# sourceMappingURL=style_entrance.css.map */

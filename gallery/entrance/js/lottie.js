@@ -2,12 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const letterContainer = document.getElementById("letter");
   const letterBg = document.querySelector(".letterBg");
 
+  const jsonPath =
+    window.innerWidth <= 500 ? "json/letter_sp.json" : "json/letter.json";
+
   const letterAnimation = lottie.loadAnimation({
     container: letterContainer,
     renderer: "svg",
     loop: false,
     autoplay: true,
-    path: "json/letter.json",
+    path: jsonPath,
   });
 
   // ✕ボタンを作成

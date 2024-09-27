@@ -29,3 +29,29 @@ document.querySelectorAll("#room-container .wall-link").forEach((link) => {
     }, 1000);
   });
 });
+
+// ... 既存のコード ...
+
+// スマートフォンでの戻るボタン対応
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+let isReloading = false;
+
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted && !isReloading) {
+    // ページがブラウザのキャッシュから復元された場合（戻るボタンで戻ってきた場合など）
+    isReloading = true;
+    // トランジションアニメーションを防ぐためのクラスを追加
+    document.body.classList.add("no-transition");
+    // 即座にリロード
+    window.location.reload();
+  }
+});
+
+// DOMContentLoadedイベントリスナーを追加
+document.addEventListener("DOMContentLoaded", function () {
+  // no-transitionクラスを削除
+  document.body.classList.remove("no-transition");
+});

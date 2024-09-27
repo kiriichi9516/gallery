@@ -39,6 +39,7 @@ function init() {
     .getElementById("rightBtn")
     .addEventListener("click", () => rotateRoom("left"));
 
+  adjustForMobile();
   animate();
 }
 
@@ -88,6 +89,8 @@ function createRoom() {
     },
   ];
 
+  const isMobile = window.innerWidth <= 500;
+
   walls.forEach((wallData, index) => {
     const wall = new THREE.Mesh(wallGeometry, materials[index]);
     wall.position.set(...wallData.position);
@@ -107,12 +110,18 @@ function createRoom() {
     }
 
     cssObject.position.z += 0.01; // 壁より少し前に配置
-    cssObject.scale.set(0.001, 0.001, 0.001); // サイズを調整
+
+    if (isMobile) {
+      cssObject.scale.set(0.001, 0.001, 0.001); // モバイル用にスケールを調整
+      cssObject.position.y *= 0; // Y軸位置を調整
+    } else {
+      cssObject.scale.set(0.001, 0.001, 0.001); // デスクトップ用のスケール
+    }
+
     room.add(cssObject);
     wallData.mesh = wall;
+    wallData.cssObject = cssObject; // cssObjectを保存
   });
-
-  const isMobile = window.innerWidth <= 500;
 
   // 床（グレー）
   const floor = new THREE.Mesh(floorCeilingGeometry, materials[5]);
@@ -220,6 +229,27 @@ function animate(time) {
   cssRenderer.render(scene, camera);
 }
 
+function adjustForMobile() {
+  const isMobile = window.innerWidth <= 400;
+  if (isMobile) {
+    const aspectRatio = window.innerWidth / window.innerHeight;
+    const newWallWidth = 0.5; // モバイル用に壁の幅を小さくする
+    const newHeight = newWallWidth / aspectRatio;
+
+    walls.forEach((wallData) => {
+      if (wallData.mesh) {
+        wallData.mesh.scale.set(
+          newWallWidth / 0.5,
+          newHeight / (0.5 / aspectRatio),
+          1
+        );
+      }
+    });
+
+    camera.position.z = 0; // カメラの位置
+  }
+}
+
 init();
 
 // ウィンドウリサイズ時の処理を更新
@@ -229,4 +259,6 @@ window.addEventListener("resize", function () {
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
   cssRenderer.setSize(window.innerWidth, window.innerHeight);
+
+  adjustForMobile(); // リサイズ時にモバイル調整を適用
 });
