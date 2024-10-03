@@ -54,7 +54,7 @@ img {
   margin-right: auto;
   left: 0;
   right: 0;
-  max-width: 200px;
+  max-width: 160px;
   bottom: 3%;
   position: absolute;
 }
@@ -601,6 +601,12 @@ img {
   position: relative;
   padding-top: 80px;
 }
+.modal-body.ex {
+  padding-top: 140px;
+}
+.modal-body.ex .modal-img {
+  margin-bottom: 120px;
+}
 
 .modal-img {
   margin-bottom: 50px;
@@ -913,9 +919,9 @@ img {
   position: absolute;
   top: -10%;
   pointer-events: none;
-  left: -10%;
-  width: 120%;
-  height: 120%;
+  left: -13%;
+  width: 126%;
+  height: 126%;
 }
 
 .img-waku-30 {
@@ -929,11 +935,11 @@ img {
 
 .img-waku-31 {
   position: absolute;
-  top: -9%;
+  top: -21%;
   pointer-events: none;
-  left: -13%;
-  width: 126%;
-  height: 126%;
+  left: -21%;
+  width: 142%;
+  height: 142%;
 }
 
 .img-waku-32 {
@@ -1182,11 +1188,22 @@ img {
   .main-box2 {
     height: 240vw;
   }
+  .modal-body {
+    position: relative;
+    padding-top: 14vw;
+  }
+  .modal-body.ex {
+    padding-top: 18vw;
+  }
+  .modal-body.ex .modal-img {
+    margin-bottom: 18vw;
+  }
   .modal-img {
     position: relative;
     width: 64%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 14vw;
   }
   .slide-box {
     top: 54%;
