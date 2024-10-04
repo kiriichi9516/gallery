@@ -155,7 +155,7 @@ img {
   margin-bottom: 0;
 }
 .slide-flex .slide-center2 {
-  width: 48%;
+  width: 52%;
 }
 .slide-flex .slide-center2 ul {
   display: flex;
@@ -163,7 +163,7 @@ img {
   justify-content: space-between;
 }
 .slide-flex .slide-center2 ul li {
-  width: 46%;
+  width: 44%;
   margin-top: 64px;
 }
 .slide-flex .slide-right2 {
@@ -881,11 +881,11 @@ img {
 
 .img-waku-25 {
   position: absolute;
-  top: -9%;
+  top: -12%;
   pointer-events: none;
-  left: -13%;
-  width: 126%;
-  height: 126%;
+  left: -14%;
+  width: 128%;
+  height: 128%;
 }
 
 .img-waku-26 {

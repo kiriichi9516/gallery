@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const letterBg = document.querySelector(".letterBg");
 
   const jsonPath =
-    window.innerWidth <= 500 ? "https://www.seisakujyo.co.jp/wp-content/themes/seisakujyo/gallery/entrance/json/letter_sp.json" : "https://www.seisakujyo.co.jp/wp-content/themes/seisakujyo/gallery/entrance/json/letter.json";
+    window.innerWidth <= 500 ? "json/letter_sp.json" : "json/letter.json";
 
   const letterAnimation = lottie.loadAnimation({
     container: letterContainer,
